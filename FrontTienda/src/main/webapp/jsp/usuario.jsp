@@ -32,45 +32,39 @@
 			<form action=""  class="form">
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="text" name="cedula" required>
+						<input type="number" name="cedula" required>
 						<label>Cedula*</label>
-					</div>
-					<p class="form_error">La cedula solo debe contener números</p>
+					</div>					
 				</div>
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="text" name="usuario" required>
 						<label>Usuario*</label>
-					</div>
-					<p class="form_error">El usuario no debe contener carácteres especiales</p>
+					</div>					
 				</div>
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="text" name="nombre" required>
 						<label>Nombre completo*</label>
-					</div>						
-					<p class="form_error">Nombre no debe contener números</p>
+					</div>				
 				</div>					
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="text" name="email" required>
 						<label>Correo Electrónico*</label>
-					</div>
-					<p class="form_error">Correo no válido</p>
+					</div>					
 				</div>
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="password" name="pass" required>
 						<label>Contraseña*</label>
-					</div>
-					<p class="form_error">la contraseña debe tener entre 4 a 16 dígitos</p>
+					</div>					
 				</div>				
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="password" name="pass2" required>
 						<label>Confirmar Contraseña*</label>
-					</div>
-					<p class="form_error">Las contraseñas no coinciden</p>
+					</div>					
 				</div>
 				<div class="grupo_boton">
 					<input type="submit" id="boton" name="btnCrear" value="Crear">						
