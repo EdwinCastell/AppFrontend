@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="css/usuario.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/main.js"></script>
-<meta http-equiv="refresh" content="500">
 <title>Tienda Genérica</title>
 </head>
 <body>
@@ -29,43 +28,44 @@
 	<div class="secciones">
 		<article id="tab1">
 		<div class="box">			
-			<form action=""  class="form">
+			<form method="get" action="./DemoServlet" class="form">
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="number" name="cedula" required>
+						<input type="number" name="cedula" id="cedula" onblur="javascript:validar();" required>
 						<label><i class="far fa-address-card"></i> Cedula*</label>
 					</div>					
 				</div>
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="text" name="usuario" required>
+						<input type="text" name="usuario" id ="usuario" onblur="javascript:validar();"  required>
 						<label><i class="far fa-user"></i> Usuario*</label>
 					</div>					
 				</div>
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="text" name="nombre" required>
+						<input type="text" name="nombre" id="nombre" onblur="javascript:validar();" required>
 						<label><i class="fas fa-file-signature"></i> Nombre completo*</label>
 					</div>				
 				</div>					
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="email" name="email" id="email" required>
+						<input type="email" name="email" id="email" onblur="javascript:validar();"  required>
 						<label><i class="far fa-envelope"></i> Correo Electrónico*</label>
 					</div>					
 				</div>
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="password" name="pass" required>
+						<input type="password" name="pass" id="pass" onblur="javascript:validar();"  required>
 						<label><i class="fas fa-unlock-alt"></i> Contraseña*</label>
 					</div>					
 				</div>				
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="password" name="pass2" required>
+						<input type="password" name="pass2" id="pass2" onblur="javascript:validar();"  required>
 						<label><i class="fas fa-key"></i> Confirmar Contraseña*</label>
-					</div>					
+					</div>									
 				</div>
+				
 				<div class="grupo_boton">
 					<button class="submit"><i class="fas fa-user-plus"></i>  Crear</button>
 					<button class="submit"><i class="far fa-edit"></i>  Actualizar</button>					
@@ -73,11 +73,12 @@
 				<div class="grupo_boton">
 					<button class="submit"><i class="fas fa-search"></i>  Consultar</button>
 					<button class="submit"><i class="fas fa-user-times"></i>  Eliminar</button>
-				</div>					
+				</div>
+				<div id="alert" class="alert"></div>				
 			</form>
-		</div>
-		
+			<script src="js/usuario.js"></script>
+		</div>		
 		</article>							
-	</div>		
+	</div>	
 </body>
 </html>

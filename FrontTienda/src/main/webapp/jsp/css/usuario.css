@@ -65,7 +65,7 @@ body{
 	transition: .5s;
 }
 .box .inputBox input:focus ~ label,
-.box .inputBox input:invalid ~ label
+.box .inputBox input:valid ~ label
 {
 	top: -18px;
 	left: 0;
@@ -178,6 +178,14 @@ ul.tabs li a .tab-text{
 .form .grupo_boton{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	margin-top: 30px;
+	margin-top: 10px;
 	
+}
+
+.alert{
+	width: 250px;
+	padding: 5px;
+	margin-top: 10px;
+	color: #CD43EC;
+	display: none;	
 }
