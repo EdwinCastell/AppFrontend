@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="stylesheet" href="css/usuario2.css">
+<link rel="stylesheet" href="css/usuario.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/main.js"></script>
 <meta http-equiv="refresh" content="500">
@@ -33,49 +33,50 @@
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="number" name="cedula" required>
-						<label>Cedula*</label>
+						<label><i class="far fa-address-card"></i> Cedula*</label>
 					</div>					
 				</div>
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="text" name="usuario" required>
-						<label>Usuario*</label>
+						<label><i class="far fa-user"></i> Usuario*</label>
 					</div>					
 				</div>
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="text" name="nombre" required>
-						<label>Nombre completo*</label>
+						<label><i class="fas fa-file-signature"></i> Nombre completo*</label>
 					</div>				
 				</div>					
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="email" name="email" required>
-						<label>Correo Electrónico*</label>
+						<input type="email" name="email" id="email" required>
+						<label><i class="far fa-envelope"></i> Correo Electrónico*</label>
 					</div>					
 				</div>
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="password" name="pass" required>
-						<label>Contraseña*</label>
+						<label><i class="fas fa-unlock-alt"></i> Contraseña*</label>
 					</div>					
 				</div>				
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="password" name="pass2" required>
-						<label>Confirmar Contraseña*</label>
+						<label><i class="fas fa-key"></i> Confirmar Contraseña*</label>
 					</div>					
 				</div>
 				<div class="grupo_boton">
-					<input type="submit" id="boton" name="btnCrear" value="Crear">						
-					<input type="submit" id="boton" name="btnActualizar" value="Actualizar">
+					<button class="submit"><i class="fas fa-user-plus"></i>  Crear</button>
+					<button class="submit"><i class="far fa-edit"></i>  Actualizar</button>					
 				</div>
 				<div class="grupo_boton">
-					<input type="submit" id="boton" name="btnConsultarr" value="Consultar">
-					<input type="submit" id="boton" name="btnBorrar" value="Eliminar">
+					<button class="submit"><i class="fas fa-search"></i>  Consultar</button>
+					<button class="submit"><i class="fas fa-user-times"></i>  Eliminar</button>
 				</div>					
 			</form>
 		</div>
+		
 		</article>							
 	</div>		
 </body>

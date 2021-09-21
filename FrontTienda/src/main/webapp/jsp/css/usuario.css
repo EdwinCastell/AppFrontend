@@ -65,14 +65,15 @@ body{
 	transition: .5s;
 }
 .box .inputBox input:focus ~ label,
-.box .inputBox input:valid ~ label
+.box .inputBox input:invalid ~ label
 {
 	top: -18px;
 	left: 0;
-	color: #CD43EC;
-	font-size: 10px;
+	color: rgb(192, 192, 192);
+	font-size: 11px;
 }
-.box input[type="submit"]
+
+.box .grupo_boton .submit
 {
 	background: transparent;
 	border: none;
@@ -84,6 +85,10 @@ body{
 	border-radius: 5px;
 	margin: 5px;
 	
+	
+}
+.box .grupo_boton .submit:hover {
+	background: #FF00BF;
 }
 
 .box input[type="number"]::-webkit-inner-spin-button,
@@ -96,10 +101,6 @@ body{
 .box input[type="number"] 
 { 
 	-moz-appearance:textfield; 
-}
-
-#boton:hover {
-	background: #FF00BF;
 }
 
 *{
@@ -121,6 +122,11 @@ ul.tabs{
 	background: #363636;
 	list-style: none;
 	display: flex;
+	
+}
+ul.tabs li:hover{	
+	background: #ff00ff;
+
 	
 }
 
@@ -168,7 +174,10 @@ ul.tabs li a .tab-text{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
+
 .form .grupo_boton{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	margin-top: 30px;
+	
 }
