@@ -8,24 +8,22 @@
 <title>Ingreso</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/estilos.css">
-
 </head>
 <body>
 	<h2>Bienvenidos a la tienda genérica</h2>
-	
-	<form method="get" action="./DemoServlet">
-		<table>
-			<tr>
-				<td><label>Usuario*</label></td>
-				<td><input type="text" name="Usuario"></td>
-				<td><label>Contraseña*</label></td>
-				<td><input type="text" name="Contraseña"></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Ingresar"></td>
-			</tr>		
-		</table>		
-	</form>
+	<div class="box">
+		<h2>Ingreso</h2>
+		<form method="get" action="./DemoServlet">
+			<div class="inputBox">
+				<input type="text" name="usuario" required>
+				<label>Usuario*</label>
+			</div>
+			<div class="inputBox">
+				<input type="password" name="pass" required>
+				<label>Contraseña*</label>
+			</div>				
+			<input type="submit" name="btnIngresar" value="Ingresar">		
+		</form>
+	</div>
 </body>
-
 </html>

@@ -50,7 +50,7 @@
 				</div>					
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="emaile" name="email" required>
+						<input type="email" name="email" required>
 						<label>Correo Electrónico*</label>
 					</div>					
 				</div>
