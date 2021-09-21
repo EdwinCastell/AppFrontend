@@ -1,8 +1,7 @@
 @charset "ISO-8859-1";
 header{
-	background: url("../imagen/tienda.jpg");
-	
-	
+	background: url("../imagen/tienda.jpg") repeat-x 70%;	
+
 }
 header h1{
 	color: #ffffff;
@@ -16,6 +15,12 @@ body{
 	font-family: sans-serif;
 	background-size: cover;
 	background: #D4D4D4;
+	
+}
+@media (max-width:480px){
+	.box{
+		width:100%;
+	}
 }
 .box{
 	position: absolute;
@@ -30,6 +35,7 @@ body{
 	border-radius: 10px;
 	
 }
+
 .box h2{
 	margin: 0 0 30px;
 	padding: 0;
@@ -69,7 +75,7 @@ body{
 {
 	top: -18px;
 	left: 0;
-	color: rgb(192, 192, 192);
+	color: #CD43EC;
 	font-size: 11px;
 }
 
@@ -158,9 +164,10 @@ ul.tabs li a .tab-text{
 		flex-basis: 0;
 		flex-grow: 1;
 	}
+	
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 480px){
 	ul.tabs li a{
 		padding: 15px 0px;
 	}
@@ -168,7 +175,7 @@ ul.tabs li a .tab-text{
 	ul.tabs li a .tab-text{
 		display: none;
 	}
-
+	
 }
 .form{
 	display: grid;
