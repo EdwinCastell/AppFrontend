@@ -13,13 +13,13 @@
 	<h2>Bienvenidos a la tienda genérica</h2>
 	<div class="box">
 		<h2>Ingreso</h2>
-		<form method="get" action="./DemoServlet">
+		<form method="get" action="../DemoServlet">
 			<div class="inputBox">
 				<input type="text" name="usuario" required>
 				<label>Usuario*</label>
 			</div>
 			<div class="inputBox">
-				<input type="password" name="pass" required>
+				<input type="password" name="contraseña" required>
 				<label>Contraseña*</label>
 			</div>				
 			<input type="submit" name="btnIngresar" value="Ingresar">		
