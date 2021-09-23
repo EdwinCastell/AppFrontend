@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="css/formulario.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
 <title>Tienda Genérica</title>
@@ -21,6 +20,7 @@
 	</header>
 	
 	<!-- Manejo de tabs para cambiar de hoja dentro de la misma pagina -->
+	
 	<div class="wrap">
 		<ul class="tabs">
 			<li><a href="#tab1"><span class="fas fa-user"></span><span class="tab-text"> Usuarios</span></a></li>
@@ -30,10 +30,13 @@
 			<li><a href="#tab4"><span class="fas fa-file-export"></span><span class="tab-text"> Reportes</span></a></li>
 		</ul>
 	</div>
+
+	
 	<!-- Pagina Usuarios -->
-	<div class="secciones">
-		<section id="tab1">
-		<div class="box">			
+	<div class="container">
+	  	<article id="tab1">
+		<div class="box">
+		<h2>Ingreso de Usuarios</h2>			
 			<form method="get" action="./DemoServlet" class="form">				
 				<div class="grupo_input"> 
 					<div class="inputBox">
@@ -92,11 +95,11 @@
 								
 			</form>			
 		</div>		
-		</section>							
+		</article>						
 	</div>
 	
 	<!-- Pagina clientes -->
-	<div class="secciones">
+	<div class="container">
 		<article id="tab2">
 		<div class="box">			
 			<form method="get" action="./DemoServlet" class="form">

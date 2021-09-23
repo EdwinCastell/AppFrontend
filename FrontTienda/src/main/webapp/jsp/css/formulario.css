@@ -1,7 +1,7 @@
-@charset "ISO-8859-1";
 header{
-	background: url("../imagen/tienda.jpg") repeat-x 100%;	
-
+	background: url("../imagen/tienda.jpg");
+	
+	
 }
 header h1{
 	color: #ffffff;
@@ -15,46 +15,25 @@ body{
 	font-family: sans-serif;
 	background-size: cover;
 	background: #D4D4D4;
-	
 }
 .box{
 	position: absolute;
 	top: 60%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	width: 700px;
+	width: 600px;
 	padding: 40px;
 	background: rgba(0,0,0,.8);
 	box-sizing: border-box;
 	box-shadow: 0 0 0 rgba(0,0,0,.5);
-	border-radius: 20px;
+	border-radius: 10px;
 	
 }
-
 .box h2{
 	margin: 0 0 30px;
 	padding: 0;
 	color: #fff;
 	text-align: center;
-}
-.form{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}
-
-.form .grupo_boton{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	margin-top: 10px;
-	
-}
-
-.alert{
-	width: 250px;
-	padding: 5px;
-	margin-top: 10px;
-	color: #CD43EC;
-	display: none;	
 }
 .box .inputBox{
 	position: relative;
@@ -89,7 +68,7 @@ body{
 {
 	top: -18px;
 	left: 0;
-	color: #CD43EC;
+	color: rgb(192, 192, 192);
 	font-size: 11px;
 }
 
@@ -104,21 +83,9 @@ body{
 	cursor: pointer;
 	border-radius: 5px;
 	margin: 5px;
-	font-size:12px;	
+	
+	
 }
-.box .btn-primary
-{
-	background: #CD43EC;
-	border: none;
-	font-size:12px;	
-}
-.box .btn-primary:hover
-{
-	background: #ff00ff;
-	border: none;
-
-}
-
 .box .grupo_boton .submit:hover {
 	background: #FF00BF;
 }
@@ -134,24 +101,7 @@ body{
 { 
 	-moz-appearance:textfield; 
 }
-.form{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}
 
-.form .grupo_boton{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	margin-top: 10px;
-	
-}
-.alert{
-	width: 250px;
-	padding: 5px;
-	margin-top: 10px;
-	color: #CD43EC;
-	display: none;	
-}
 *{
 	margin: 0;
 	padding: 0;
@@ -207,10 +157,9 @@ ul.tabs li a .tab-text{
 		flex-basis: 0;
 		flex-grow: 1;
 	}
-	
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 450px){
 	ul.tabs li a{
 		padding: 15px 0px;
 	}
@@ -218,26 +167,24 @@ ul.tabs li a .tab-text{
 	ul.tabs li a .tab-text{
 		display: none;
 	}
+
+}
+.form{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.form .grupo_boton{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 10px;
 	
 }
-/*Responsive form*/
-@media (max-width:584px){
-	.box{
-		max-width: 100%;
-		
-	}
-	.box .inputBox input{
-		margin-bottom: 15px;
-		width: 100%;
-		max-height: 300px;
-		overflow: scroll;
-	}
-	.box .grupo_boton .submit{
-		width: 100%;
-	}
+
+.alert{
+	width: 250px;
+	padding: 5px;
+	margin-top: 10px;
+	color: #CD43EC;
+	display: none;	
 }
-/*Fin del responsive*/
-
-
-
-

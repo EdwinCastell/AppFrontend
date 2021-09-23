@@ -19,7 +19,7 @@
 				<label>Usuario*</label>
 			</div>
 			<div class="inputBox">
-				<input type="password" name="contraseña" required>
+				<input type="password" name="clave" required>
 				<label>Contraseña*</label>
 			</div>				
 			<input type="submit" name="btnIngresar" value="Ingresar">		
