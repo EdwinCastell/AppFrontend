@@ -1,0 +1,198 @@
+@charset "ISO-8859-1";
+header{
+	background: url("../imagen/tienda.jpg") repeat-x 70%;	
+
+}
+header h1{
+	color: #ffffff;
+	padding: 40px;
+	text-align: center;
+	font-size: 200%;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-size: cover;
+	background: #D4D4D4;
+	
+}
+@media (max-width:480px){
+	.box{
+		width:100%;
+	}
+}
+.box{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 600px;
+	padding: 40px;
+	background: rgba(0,0,0,.8);
+	box-sizing: border-box;
+	box-shadow: 0 0 0 rgba(0,0,0,.5);
+	border-radius: 10px;
+	
+}
+
+.box h2{
+	margin: 0 0 30px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+}
+.box .inputBox{
+	position: relative;
+}
+.box .inputBox input{
+	width: 80%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	border-color: #CD43EC;
+	outline: none;
+	background: transparent;
+	
+}
+.box .inputBox label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	letter-spacing: 1px;
+	padding: 10px 0;
+	font-size: 12px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label
+{
+	top: -18px;
+	left: 0;
+	color: #CD43EC;
+	font-size: 11px;
+}
+
+.box .grupo_boton .submit
+{
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	background: #CD43EC;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	margin: 5px;
+	
+	
+}
+.box .grupo_boton .submit:hover {
+	background: #FF00BF;
+}
+
+.box input[type="number"]::-webkit-inner-spin-button,
+.box input[type="number"]::-webkit-outer-spin-button 
+{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.box input[type="number"] 
+{ 
+	-moz-appearance:textfield; 
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wrap{
+	width: 800px;
+	max-width: 90%;
+	margin: 30px auto;
+}
+
+ul.tabs{
+	width: 100%;
+	background: #363636;
+	list-style: none;
+	display: flex;
+	
+}
+ul.tabs li:hover{	
+	background: #ff00ff;
+
+	
+}
+
+ul.tabs li{
+	width: 18%;
+}
+
+ul.tabs li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	padding: 20px 0px;
+}
+
+.active{
+	background: #CD43EC;
+	
+}
+
+ul.tabs li a .tab-text{
+	margin-left: 8px;
+}
+
+@media screen and (max-width: 700px){
+	ul.tabs li{
+		width: none;
+		flex-basis: 0;
+		flex-grow: 1;
+	}
+	
+}
+
+@media screen and (max-width: 480px){
+	ul.tabs li a{
+		padding: 15px 0px;
+	}
+
+	ul.tabs li a .tab-text{
+		display: none;
+	}
+	
+}
+.form{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.form .grupo_boton{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 10px;
+	
+}
+
+.alert{
+	width: 250px;
+	padding: 5px;
+	margin-top: 10px;
+	color: #CD43EC;
+	display: none;	
+}
