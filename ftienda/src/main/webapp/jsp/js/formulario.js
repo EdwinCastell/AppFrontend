@@ -44,3 +44,19 @@ function validarCliente(){
 	}	
 	
 }
+
+function validarProveedor(){	
+	
+	var email = document.getElementById("emailProveedor").value;
+	
+	
+	
+	if(validador(email)==false){
+		$('#alert3').html('Correo no v\u00E1lido (ejemplo@ejemplo.com)').slideDown(500);
+		$('#emailProveedor').focus();
+		return false;
+	}else{
+		$("#alert3").html("").slideUp(300);
+	}	
+	
+}
