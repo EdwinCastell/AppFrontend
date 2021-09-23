@@ -8,6 +8,9 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="css/formulario.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
 <title>Tienda Genérica</title>
 </head>
@@ -29,59 +32,69 @@
 	</div>
 	<!-- Pagina Usuarios -->
 	<div class="secciones">
-		<article id="tab1">
+		<section id="tab1">
 		<div class="box">			
-			<form method="get" action="./DemoServlet" class="form">
+			<form method="get" action="./DemoServlet" class="form">				
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="number" name="cedula" id="cedulaUsuario" required>
 						<label><i class="far fa-address-card"></i> Cedula*</label>
 					</div>					
 				</div>
+				
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="text" name="usuario" id ="usuario"  required>
 						<label><i class="far fa-user"></i> Usuario*</label>
 					</div>					
 				</div>
+				
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="text" name="nombre" id="nombreUsuario"  required>
 						<label><i class="fas fa-file-signature"></i> Nombre completo*</label>
 					</div>				
-				</div>					
+				</div>	
+								
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="email" name="email" id="emailUsuario" onblur="javascript:validarUsuario();"  required>
 						<label><i class="far fa-envelope"></i> Correo Electrónico*</label>
 					</div>					
 				</div>
+				
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="password" name="pass" id="pass"   required>
+						<input type="password" name="pass" id="pass" required>
+												
 						<label><i class="fas fa-unlock-alt"></i> Contraseña*</label>
 					</div>					
-				</div>				
+				</div>	
+												
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="password" name="pass2" id="pass2" onblur="javascript:validarUsuario();"  required>
+						<input type="password" name="pass2" id="pass2" onblur="javascript:verificarPasswords();"  required>						
 						<label><i class="fas fa-key"></i> Confirmar Contraseña*</label>
 					</div>									
 				</div>
 				
+				
 				<div class="grupo_boton">
-					<button class="submit"><i class="fas fa-user-plus"></i>  Crear</button>
+					<button id="login" class="submit"><i class="fas fa-user-plus"></i>  Crear</button>
 					<button class="submit"><i class="far fa-edit"></i>  Actualizar</button>					
 				</div>
 				<div class="grupo_boton">
 					<button class="submit"><i class="fas fa-search"></i>  Consultar</button>
 					<button class="submit"><i class="fas fa-user-times"></i>  Eliminar</button>
 				</div>
-				<div id="alert" class="alert"></div>				
+				<!-- mensaje de verificacion -->
+				<div id="alert" class="alert"></div>
+								
 			</form>			
 		</div>		
-		</article>							
+		</section>							
 	</div>
+	
 	<!-- Pagina clientes -->
 	<div class="secciones">
 		<article id="tab2">

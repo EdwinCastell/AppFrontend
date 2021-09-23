@@ -1,6 +1,6 @@
 @charset "ISO-8859-1";
 header{
-	background: url("../imagen/tienda.jpg") repeat-x 70%;	
+	background: url("../imagen/tienda.jpg") repeat-x 100%;	
 
 }
 header h1{
@@ -17,22 +17,17 @@ body{
 	background: #D4D4D4;
 	
 }
-@media (max-width:480px){
-	.box{
-		width:100%;
-	}
-}
 .box{
 	position: absolute;
 	top: 60%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	width: 600px;
+	width: 700px;
 	padding: 40px;
 	background: rgba(0,0,0,.8);
 	box-sizing: border-box;
 	box-shadow: 0 0 0 rgba(0,0,0,.5);
-	border-radius: 10px;
+	border-radius: 20px;
 	
 }
 
@@ -41,6 +36,25 @@ body{
 	padding: 0;
 	color: #fff;
 	text-align: center;
+}
+.form{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.form .grupo_boton{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 10px;
+	
+}
+
+.alert{
+	width: 250px;
+	padding: 5px;
+	margin-top: 10px;
+	color: #CD43EC;
+	display: none;	
 }
 .box .inputBox{
 	position: relative;
@@ -90,9 +104,21 @@ body{
 	cursor: pointer;
 	border-radius: 5px;
 	margin: 5px;
-	
-	
+	font-size:12px;	
 }
+.box .btn-primary
+{
+	background: #CD43EC;
+	border: none;
+	font-size:12px;	
+}
+.box .btn-primary:hover
+{
+	background: #ff00ff;
+	border: none;
+
+}
+
 .box .grupo_boton .submit:hover {
 	background: #FF00BF;
 }
@@ -108,7 +134,24 @@ body{
 { 
 	-moz-appearance:textfield; 
 }
+.form{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
 
+.form .grupo_boton{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 10px;
+	
+}
+.alert{
+	width: 250px;
+	padding: 5px;
+	margin-top: 10px;
+	color: #CD43EC;
+	display: none;	
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -177,22 +220,24 @@ ul.tabs li a .tab-text{
 	}
 	
 }
-.form{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+/*Responsive form*/
+@media (max-width:584px){
+	.box{
+		max-width: 100%;
+		
+	}
+	.box .inputBox input{
+		margin-bottom: 15px;
+		width: 100%;
+		max-height: 300px;
+		overflow: scroll;
+	}
+	.box .grupo_boton .submit{
+		width: 100%;
+	}
 }
+/*Fin del responsive*/
 
-.form .grupo_boton{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	margin-top: 10px;
-	
-}
 
-.alert{
-	width: 250px;
-	padding: 5px;
-	margin-top: 10px;
-	color: #CD43EC;
-	display: none;	
-}
+
+
