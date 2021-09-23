@@ -6,9 +6,9 @@
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="stylesheet" href="css/formulario.css">
+<link rel="stylesheet" href="/jsp/js/css/formulario.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/main.js"></script>
+<script src="/jsp/js/main.js"></script>
 <title>Tienda Genérica</title>
 </head>
 <body>
@@ -31,8 +31,8 @@
 	<div class="secciones">
 		<article id="tab1">
 		<div class="box">			
-			<form method="get" action="./DemoServlet" class="form">
-				<div class="grupo_input"> 
+			<form method="get" action="../DemoServlet" class="form">
+				<div class="grupo_input">
 					<div class="inputBox">
 						<input type="number" name="cedula" id="cedulaUsuario" required>
 						<label><i class="far fa-address-card"></i> Cedula*</label>
@@ -86,7 +86,7 @@
 	<div class="secciones">
 		<article id="tab2">
 		<div class="box">			
-			<form method="get" action="./DemoServlet" class="form">
+			<form method="get" action="../DemoServlet" class="form">
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="number" name="cedula" id="cedulaCliente"  required>
@@ -130,10 +130,10 @@
 				
 				<div id="alert2" class="alert"></div>				
 			</form>
-			<script src="js/cliente.js"></script>
+			<script src="/jsp/js/cliente.js"></script>
 		</div>		
 		</article>							
 	</div>
-<script src="js/formulario.js"></script>	
+<script src="/jsp/js/formulario.js"></script>	
 </body>
 </html>
