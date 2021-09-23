@@ -32,8 +32,7 @@ body{
 	background: rgba(0,0,0,.8);
 	box-sizing: border-box;
 	box-shadow: 0 0 0 rgba(0,0,0,.5);
-	border-radius: 10px;
-	
+	border-radius: 10px;	
 }
 
 .box h2{
@@ -164,6 +163,32 @@ ul.tabs li a .tab-text{
 		flex-basis: 0;
 		flex-grow: 1;
 	}
+	.box {		
+		
+		top: 80%;
+		left: 50%;
+		
+		max-width: 100%;
+		padding: 50px;
+		background: rgba(0,0,0,.8);
+		box-sizing: border-box;
+		box-shadow: 0 0 0 rgba(0,0,0,.7);
+		border-radius: 10px;
+	
+	}
+	.box .form{
+		display: grid;
+		grid-template-columns: 1fr;
+		font-size: 12px;
+	}
+	.form .grupo_boton{
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.box .inputBox input{
+	width: 100%;
+	
+	}
 	
 }
 
@@ -174,6 +199,32 @@ ul.tabs li a .tab-text{
 
 	ul.tabs li a .tab-text{
 		display: none;
+	}
+	.box {		
+		
+		top: 80%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		max-width: 100%;
+		padding: 50px;
+		background: rgba(0,0,0,.8);
+		box-sizing: border-box;
+		box-shadow: 0 0 0 rgba(0,0,0,.7);
+		border-radius: 10px;
+	
+	}
+	.box .form{
+		display: grid;
+		grid-template-columns: 1fr;
+		font-size: 12px;
+	}
+	.form .grupo_boton{
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.box .inputBox input{
+	width: 100%;
+	
 	}
 	
 }

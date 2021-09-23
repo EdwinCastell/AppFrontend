@@ -6,6 +6,17 @@ body{
 	background: url("../imagen/tienda.jpg");
 	background-size: cover;
 }
+header h1{
+	color: #ffffff;
+	padding: 40px;
+	text-align: center;
+	font-size: 200%;
+}
+h2 {
+	color: #fff;
+	text-align: center;
+	
+}
 .box{
 	position: absolute;
 	top: 50%;
@@ -70,14 +81,4 @@ body{
 	padding: 10px 20px;
 	cursor: pointer;
 	border-radius: 5px;
-}
-.error {
-	color: red;
-	text-align: center;
-	display: block;
-	padding: 5px 0px;
-	font-size: 70%;
-}
-.error p{
-	margin: 0px 0;
 }
