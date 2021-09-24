@@ -6,9 +6,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="css/formulario.css">
 <link rel="stylesheet" href="jsp/css/formulario.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script src="js/main.js"></script>
 <script src="jsp/js/main.js"></script>
 <title>Tienda Genérica</title>
@@ -60,7 +61,8 @@
 				</div>
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="password" name="pass" id="pass"   required>
+						<input type="password" name="pass" id="pass" required>
+							<span class="far fa-eye icon" id="mostrar"> <span class="pwdtxt" style="cursor:pointer;">Mostrar contraseña</span></span>					
 						<label><i class="fas fa-unlock-alt"></i> Contraseña*</label>
 					</div>					
 				</div>				

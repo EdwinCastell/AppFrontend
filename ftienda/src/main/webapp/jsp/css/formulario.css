@@ -58,6 +58,10 @@ body{
 	background: transparent;
 	
 }
+.pwdtxt,
+.icon{
+	color:#CD43EC;
+}
 .box .inputBox label{
 	position: absolute;
 	top: 0;
@@ -68,14 +72,18 @@ body{
 	color: #fff;
 	pointer-events: none;
 	transition: .5s;
+	
 }
+
+
 .box .inputBox input:focus ~ label,
 .box .inputBox input:valid ~ label
-{
+{	
 	top: -18px;
 	left: 0;
 	color: #CD43EC;
 	font-size: 11px;
+
 }
 
 .box .grupo_boton .submit
@@ -89,13 +97,12 @@ body{
 	cursor: pointer;
 	border-radius: 5px;
 	margin: 5px;
-	
-	
+	font-size: 12px;	
 }
+
 .box .grupo_boton .submit:hover {
 	background: #FF00BF;
 }
-
 .box input[type="number"]::-webkit-inner-spin-button,
 .box input[type="number"]::-webkit-outer-spin-button 
 {
