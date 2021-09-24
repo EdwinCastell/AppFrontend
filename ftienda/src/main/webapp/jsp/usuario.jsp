@@ -21,15 +21,17 @@
 	</header>
 	
 	<!-- Manejo de tabs para cambiar de hoja dentro de la misma pagina -->
-	<div class="wrap">
-		<ul class="tabs">
-			<li><a href="#tab1"><span class="fas fa-user"></span><span class="tab-text"> Usuarios</span></a></li>
-			<li><a href="#tab2"><span class="fas fa-users"></span><span class="tab-text"> Clientes</span></a></li>
-			<li><a href="#tab3"><span class="fas fa-truck"></span><span class="tab-text"> Proveedores</span></a></li>
-			<li><a href="#tab4"><span class="fas fa-cart-arrow-down"></span><span class="tab-text"> Ventas</span></a></li>
-			<li><a href="#tab4"><span class="fas fa-file-export"></span><span class="tab-text"> Reportes</span></a></li>
-		</ul>
-	</div>
+	<section>
+		<div class="wrap">
+			<ul class="tabs">
+				<li><a href="#tab1"><span class="fas fa-user"></span><span class="tab-text"> Usuarios</span></a></li>
+				<li><a href="#tab2"><span class="fas fa-users"></span><span class="tab-text"> Clientes</span></a></li>
+				<li><a href="#tab3"><span class="fas fa-truck"></span><span class="tab-text"> Proveedores</span></a></li>
+				<li><a href="#tab4"><span class="fas fa-cart-arrow-down"></span><span class="tab-text"> Ventas</span></a></li>
+				<li><a href="#tab4"><span class="fas fa-file-export"></span><span class="tab-text"> Reportes</span></a></li>
+			</ul>
+		</div>
+	</section>
 	<!-- Pagina Usuarios -->
 	<div class="secciones">
 		<article id="tab1">
@@ -38,7 +40,7 @@
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="number" name="cedula" id="cedulaUsuario" required>
-						<label><i class="far fa-address-card"></i> Cedula*</label>
+						<label><i class="far fa-address-card"></i> Cédula*</label>
 					</div>					
 				</div>
 				<div class="grupo_input"> 
@@ -59,20 +61,22 @@
 						<label><i class="far fa-envelope"></i> Correo Electrónico*</label>
 					</div>					
 				</div>
+				
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="password" name="pass" id="pass" required>
-							<span class="far fa-eye icon" id="mostrar"> <span class="pwdtxt" style="cursor:pointer;">Mostrar contraseña</span></span>					
+						<span class="far fa-eye icon" id="mostrar"> <span class="pwdtxt" style="cursor:pointer;">Mostrar contraseña</span></span>						
 						<label><i class="fas fa-unlock-alt"></i> Contraseña*</label>
 					</div>					
-				</div>				
+				</div>	
+							
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="password" name="pass2" id="pass2" onblur="javascript:validarUsuario();"  required>
+						<input type="password" name="pass2" id="pass2" onblur="javascript:validarUsuario();"  required>						
 						<label><i class="fas fa-key"></i> Confirmar Contraseña*</label>
 					</div>									
 				</div>
-				
+					
 				<div class="grupo_boton">
 					<button class="submit"><i class="fas fa-user-plus"></i>  Crear</button>
 					<button class="submit"><i class="far fa-edit"></i>  Actualizar</button>					
@@ -94,7 +98,7 @@
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="number" name="cedula" id="cedulaCliente"  required>
-						<label><i class="far fa-address-card"></i> Cedula*</label>
+						<label><i class="far fa-address-card"></i> Cédula*</label>
 					</div>					
 				</div>
 				<div class="grupo_input"> 
@@ -111,13 +115,13 @@
 				</div>					
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="email" name="email" id="emailCliente" onblur="javascript:validarCliente();"  required>
+						<input type="email" name="emailP" id="emailCliente" onblur="javascript:validarProveedor();"  required>
 						<label><i class="far fa-envelope"></i> Correo Electrónico*</label>
 					</div>				
 				</div>
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="text" name="direccion" id="direccion"   required>
+						<input type="text" name="direccion" id="direccionCliente"   required>
 						<label><i class="fas fa-map-marked"></i> Dirección*</label>
 					</div>					
 				</div>	<br>			
@@ -168,7 +172,7 @@
 				</div>
 				<div class="grupo_input"> 
 					<div class="inputBox">
-						<input type="text" name="direccion" id="direccion"   required>
+						<input type="text" name="direccion" id="direccionProveedor"   required>
 						<label><i class="fas fa-map-marked"></i> Dirección*</label>
 					</div>					
 				</div>	<br>			

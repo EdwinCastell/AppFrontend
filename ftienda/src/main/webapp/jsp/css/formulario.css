@@ -17,14 +17,10 @@ body{
 	background: #D4D4D4;
 	
 }
-@media (max-width:480px){
-	.box{
-		width:100%;
-	}
-}
+
 .box{
 	position: absolute;
-	top: 60%;
+	top: 65%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	width: 600px;
@@ -88,6 +84,7 @@ body{
 
 .box .grupo_boton .submit
 {
+	position: relative;	
 	background: transparent;
 	border: none;
 	outline: none;
@@ -97,7 +94,6 @@ body{
 	cursor: pointer;
 	border-radius: 5px;
 	margin: 5px;
-	font-size: 12px;	
 }
 
 .box .grupo_boton .submit:hover {
@@ -172,7 +168,7 @@ ul.tabs li a .tab-text{
 	}
 	.box {		
 		
-		top: 80%;
+		top: 95%;
 		left: 50%;
 		max-height:100%;
 		max-width: 100%;
@@ -244,7 +240,7 @@ ul.tabs li a .tab-text{
 .form .grupo_boton{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	margin-top: 10px;
+	margin-top: 10%;
 	
 }
 
