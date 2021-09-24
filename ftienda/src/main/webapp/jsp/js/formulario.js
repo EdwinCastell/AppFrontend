@@ -12,7 +12,7 @@ function validarUsuario(){
 	
 	
 	if(validador(email)==false){
-		$('#alert').html('Correo no v\u00E1lido (ejemplo@ejemplo.com)').slideDown(500);
+		$('#alert').html('Por favor digite un correo v\u00E1lido (ejemplo@ejemplo.com)').slideDown(500);
 		$('#emailUsuario').focus();
 		return false;
 	}else{
@@ -20,8 +20,7 @@ function validarUsuario(){
 	}	
 
 	if(pass!= pass2){
-		$('#alert').html('Las contrase\u00F1as no coinciden').slideDown(500);
-		$('#pass2').focus();
+		$('#alert').html('Las contrase\u00F1as no coinciden').slideDown(500);		
 		return false;
 	}else{
 		$("#alert").html("").slideUp(300);

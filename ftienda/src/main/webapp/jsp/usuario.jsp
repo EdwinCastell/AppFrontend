@@ -37,6 +37,7 @@
 		<article id="tab1">
 		<div class="box">			
 			<form method="get" action="./DemoServlet" class="form">
+				
 				<div class="grupo_input"> 
 					<div class="inputBox">
 						<input type="number" name="cedula" id="cedulaUsuario" required>
