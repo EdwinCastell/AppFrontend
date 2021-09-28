@@ -154,12 +154,13 @@ body{
 .grupo_file{
 	position: relative;
 	padding: 10px 10px;
-	width: 60%;
+	width: 50%;
 	background-color: #CD43EC;
 	border-radius:5px;
 	outline: none;
 	box-shadow: 0px 3px 0px #CD43EC;
 	height: 10%;
+	left: 30px;
 }
 
 .grupo_file:hover {
@@ -200,7 +201,7 @@ ul.tabs li:hover{
 }
 
 ul.tabs li{
-	width: 16.3%;
+	width: 16%;
 	
 }
 
@@ -326,3 +327,4 @@ ul.tabs li a .tab-text{
 	color: #CD43EC;
 	display: none;	
 }
+

@@ -67,8 +67,9 @@ document.getElementById('file').onchange=function(e){
         let preview=document.getElementById('preview');
             image=document.createElement('img');
             image.src=reader.result;
-            image.style.width="200px";
+            image.style.width="250px";
             preview.innerHTML='';
             preview.append(image);
     }
 }
+

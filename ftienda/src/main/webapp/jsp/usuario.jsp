@@ -217,11 +217,10 @@
 				</div>
 																		
 				<div class="grupo_boton">
-					<button class="submit"><i class="fas fa-file-upload"></i> Cargar</button>
-					<!--Previsualizacion-->
-        								
+					<button class="submit"><i class="fas fa-file-upload"></i> Cargar</button>				   								
 				</div>
-				<div id="preview" class="styleImage"></div>							
+			<!--Previsualizacion-->			
+			<div id="preview" class="styleImage"></div>										
 			</form>			
 		</div>		
 		</article>							
