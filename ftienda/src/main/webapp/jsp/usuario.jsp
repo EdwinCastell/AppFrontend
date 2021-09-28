@@ -17,7 +17,7 @@
 <body>
 	<!-- Cabecera -->
 	<header>
-		<h1>Tienda Genérica</h1>
+		<h1></h1>
 	</header>
 	
 	<!-- Manejo de tabs para cambiar de hoja dentro de la misma pagina -->
@@ -27,12 +27,14 @@
 				<li><a href="#tab1"><span class="fas fa-user"></span><span class="tab-text"> Usuarios</span></a></li>
 				<li><a href="#tab2"><span class="fas fa-users"></span><span class="tab-text"> Clientes</span></a></li>
 				<li><a href="#tab3"><span class="fas fa-truck"></span><span class="tab-text"> Proveedores</span></a></li>
-				<li><a href="#tab4"><span class="fas fa-cart-arrow-down"></span><span class="tab-text"> Ventas</span></a></li>
-				<li><a href="#tab4"><span class="fas fa-file-export"></span><span class="tab-text"> Reportes</span></a></li>
+				<li><a href="#tab4"><span class="fas fa-box-open"></span><span class="tab-text"> Productos</span></a></li>
+				<li><a href="#tab5"><span class="fas fa-cart-arrow-down"></span><span class="tab-text"> Ventas</span></a></li>
+				<li><a href="#tab6"><span class="fas fa-file-export"></span><span class="tab-text"> Reportes</span></a></li>
 			</ul>
 		</div>
 	</section>
 	<!-- Pagina Usuarios -->
+	<section>
 	<div class="secciones">
 		<article id="tab1">
 		<div class="box">			
@@ -79,18 +81,20 @@
 				</div>
 					
 				<div class="grupo_boton">
-					<button class="submit"><i class="fas fa-user-plus"></i>  Crear</button>
-					<button class="submit"><i class="far fa-edit"></i>  Actualizar</button>					
+					<button class="submit" name= "accion"><i class="fas fa-user-plus"></i>  Crear</button>
+					<button class="submit" name= "accion"><i class="far fa-edit"></i>  Actualizar</button>					
 				</div>
 				<div class="grupo_boton">
-					<button class="submit"><i class="fas fa-search"></i>  Consultar</button>
-					<button class="submit"><i class="fas fa-user-times"></i>  Eliminar</button>
+					<button class="submit" name= "accion"><i class="fas fa-search"></i>  Consultar</button>
+					<button class="submit" name= "accion"><i class="fas fa-user-times"></i>  Eliminar</button>
 				</div>
 				<div id="alert" class="alert"></div>				
 			</form>			
 		</div>		
 		</article>							
 	</div>
+	</section>
+	
 	<!-- Pagina clientes -->
 	<div class="secciones">
 		<article id="tab2">
@@ -142,6 +146,7 @@
 		</div>		
 		</article>							
 	</div>
+	
 	<!-- Pagina proveedores -->
 	<div class="secciones">
 		<article id="tab3">
@@ -193,6 +198,35 @@
 		</div>		
 		</article>							
 	</div>
+	
+	<!-- Pagina Productos -->
+	<div class="secciones">
+		<article id="tab4">
+		<div class="box box_file">			
+			<form method="get" action="./DemoServlet" class="form">
+			
+				<div class="grupo_input"> 
+					<div class="inputBox">
+						<input type="text" name="archivo" id="archivo"  required>
+						<label><i class="far fa-file-alt"></i> Nombre del archivo*</label>
+					</div>					
+				</div>
+				<div class="grupo_input grupo_file" id="file">
+					<p class="add_texto" ><i class="far fa-file-image"></i> Examinar</p>					
+					<input type="file" class="file" name="file" id="file"  accept="image/png, .jpeg, .jpg, image/gif">										
+				</div>
+																		
+				<div class="grupo_boton">
+					<button class="submit"><i class="fas fa-file-upload"></i> Cargar</button>
+					<!--Previsualizacion-->
+        								
+				</div>
+				<div id="preview" class="styleImage"></div>							
+			</form>			
+		</div>		
+		</article>							
+	</div>
+	
 <script src="js/formulario.js"></script>
 <script src="jsp/js/formulario.js"></script>	
 </body>
