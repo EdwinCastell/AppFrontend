@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>Bienvenido al menu principal</h1>
+	<h1>Se borró</h1>
 </body>
 </html>

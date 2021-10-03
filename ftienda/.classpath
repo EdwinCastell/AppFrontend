@@ -13,7 +13,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/Users/Asus X413EA/Documents/PROYECTO CICLO 3/json-simple-1.1.1.jar">
+	<classpathentry kind="lib" path="D:/Carpeta Curso TIC/CICLO 3/FRONT/json-simple-1.1.1.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>

@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/formulario.css">
 <link rel="stylesheet" href="jsp/css/formulario.css">
 
+
 <script src="js/main.js"></script>
 <script src="jsp/js/main.js"></script>
 <title>Tienda Genérica</title>
@@ -38,10 +39,11 @@
 	<div class="secciones">
 		<article id="tab1">
 		<div class="box">			
-			<form method="get" action="./DemoServlet" class="form">
+			<form method="get" action="./Controlador" class="form">
 				
 				<div class="grupo_input"> 
 					<div class="inputBox">
+						<input type="hidden" name="menu" value="Usuarios">
 						<input type="number" name="cedula" id="cedulaUsuario" required>
 						<label><i class="far fa-address-card"></i> Cédula*</label>
 					</div>					
@@ -81,12 +83,12 @@
 				</div>
 					
 				<div class="grupo_boton">
-					<button class="submit" name= "accion"><i class="fas fa-user-plus"></i>  Crear</button>
-					<button class="submit" name= "accion"><i class="far fa-edit"></i>  Actualizar</button>					
+					<button class="submit" name= "accion" value="agregar"><i class="fas fa-user-plus"></i>  Crear</button>
+					<button class="submit" name= "accion" value="actualizar"><i class="far fa-edit"></i>  Actualizar</button>					
 				</div>
 				<div class="grupo_boton">
 					<button class="submit" name= "accion"><i class="fas fa-search"></i>  Consultar</button>
-					<button class="submit" name= "accion"><i class="fas fa-user-times"></i>  Eliminar</button>
+					<button class="submit" name= "accion" value="eliminar"><i class="fas fa-user-times"></i>  Eliminar</button>
 				</div>
 				<div id="alert" class="alert"></div>				
 			</form>			
