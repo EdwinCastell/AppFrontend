@@ -14,39 +14,47 @@
 <body>
 
 	<div class="col-md-8">
-		<table class="table">
-			<thead class="thead-dark">
-				<tr>
-					<th scope="col">Cedula</th>
-					<th scope="col">Nombre</th>
-					<th scope="col">Email</th>
-					<th scope="col">Usuario</th>
-					<th scope="col">Password</th>
-				</tr>
-			</thead>
-			<tbody>
-				<%
-				try {
-					ArrayList<Usuarios> lista = TestJSON.getJSON();
-					request.setAttribute("lista", lista);
+		<form method="get" action="./Controlador" class="form">
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Cedula</th>
+						<th scope="col">Nombre</th>
+						<th scope="col">Email</th>
+						<th scope="col">Usuario</th>
+						<th scope="col">Password</th>
+						<th scope="col">Actualizar</th>
+						<th scope="col">Eliminar</th>
+					</tr>
+				</thead>
+				<tbody>
+					<%
+					try {
+						ArrayList<Usuarios> lista = TestJSON.getJSON();
+						request.setAttribute("lista", lista);
 
-					for (Usuarios usuario : lista) {
-				%>
-				<tr>
-					<td><%=usuario.getCedula_usuario()%></td>
-					<td><%=usuario.getNombre_usuario()%></td>
-					<td><%=usuario.getEmail_usuario()%></td>
-					<td><%=usuario.getPassword()%></td>
-					<td><%=usuario.getUsuario()%></td>
-				</tr>
-				<%
-				}
-				} catch (Exception e) {
-				e.printStackTrace();
-				}
-				%>
-			</tbody>
-		</table>
+						for (Usuarios usuario : lista) {
+					%>
+					<tr>
+						<td><%=usuario.getCedula_usuario()%></td>
+						<td><%=usuario.getNombre_usuario()%></td>
+						<td><%=usuario.getEmail_usuario()%></td>
+						<td><%=usuario.getPassword()%></td>
+						<td><%=usuario.getUsuario()%></td>
+						<td><button class="submit actualizar" name="accion"
+								value="actualizar">Actualizar</button></td>
+						<td><button class="submit eliminar" name="accion"
+								value="eliminar">Eliminar</button></td>
+					</tr>
+					<%
+					}
+					} catch (Exception e) {
+					e.printStackTrace();
+					}
+					%>
+				</tbody>
+			</table>
+		</form>
 	</div>
 
 </body>

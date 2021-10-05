@@ -104,17 +104,18 @@
 							<button class="submit" name="accion" value="agregar">
 								<i class="fas fa-user-plus"></i> Crear
 							</button>
-							<button class="submit" name="accion" value="actualizar">
+							<!--<button class="submit" name="accion">
+								<i class="fas fa-search"></i> Consultar
+							</button>-->
+							<!-- <button class="submit" name="accion" value="actualizar">
 								<i class="far fa-edit"></i> Actualizar
-							</button>
+							</button>-->
 						</div>
 						<div class="grupo_boton">
-							<button class="submit" name="accion">
-								<i class="fas fa-search"></i> Consultar
-							</button>
-							<button class="submit" name="accion" value="eliminar">
+
+							<!-- <button class="submit" name="accion" value="eliminar">
 								<i class="fas fa-user-times"></i> Eliminar
-							</button>
+							</button>-->
 						</div>
 						<div id="alert" class="alert"></div>
 						<div id="alertpass" class="alert alertpass"></div>
@@ -188,6 +189,8 @@
 					<div id="alert2" class="alert"></div>
 				</form>
 			</div>
+			<iframe id="tableUsuario" class="bdtable" src="jsp/TraeClientes.jsp">
+			</iframe>
 		</article>
 	</div>
 

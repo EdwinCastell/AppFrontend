@@ -331,9 +331,9 @@ ul.tabs li a .tab-text{
 
 .bdtable {
     border: 1px solid #CD43EC;
-    width: 500px;
+    width: 600px;
     height: 400px;
-    transform: translate(30%,15%);
+    transform: translate(10%,15%);
     border-radius: 5%;
 
 }

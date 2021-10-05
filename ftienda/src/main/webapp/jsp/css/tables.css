@@ -22,3 +22,17 @@ caption {
 th{
 	 background: #CD43EC;
 }
+
+.submit{
+	border-radius: 2px;
+	color: white;
+}
+
+.actualizar{
+	background-color: #8000ff;
+	
+}
+
+.eliminar{
+	background: #ff00ff;
+}
