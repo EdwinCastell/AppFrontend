@@ -12,7 +12,7 @@
 </head>
 <body>
 	<header>
-		<h1>Tienda Genérica</h1>
+		<h1>Los solfamitas</h1>
 	</header>
 	<div class="box">
 		<h2>Ingreso</h2>

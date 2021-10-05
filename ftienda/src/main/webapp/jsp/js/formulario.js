@@ -5,38 +5,25 @@ function validador(email){
 
 function validarUsuario(){	
 	
-	var email = document.getElementById("emailUsuario").value;
-	var pass = document.getElementById("pass").value;
-	var pass2 = document.getElementById("pass2").value;
-	
+	var email = document.getElementById("emailUsuario").value;	
 	
 	
 	if(validador(email)==false){
 		$('#alert').html('Por favor digite un correo v\u00E1lido (ejemplo@ejemplo.com)').slideDown(500);
-		$('#emailUsuario').focus();
 		return false;
 	}else{
 		$("#alert").html("").slideUp(300);
 	}	
-
-	if(pass!= pass2){
-		$('#alert').html('Las contrase\u00F1as no coinciden').slideDown(500);		
-		return false;
-	}else{
-		$("#alert").html("").slideUp(300);
-	}
 	
 }
 
 function validarCliente(){	
 	
-	var email = document.getElementById("emailCliente").value;
-	
+	var email = document.getElementById("emailCliente").value;	
 	
 	
 	if(validador(email)==false){
 		$('#alert2').html('Correo no v\u00E1lido (ejemplo@ejemplo.com)').slideDown(500);
-		$('#emailCliente').focus();
 		return false;
 	}else{
 		$("#alert2").html("").slideUp(300);
@@ -52,7 +39,6 @@ function validarProveedor(){
 	
 	if(validador(email)==false){
 		$('#alert3').html('Correo no v\u00E1lido (ejemplo@ejemplo.com)').slideDown(500);
-		$('#emailProveedor').focus();
 		return false;
 	}else{
 		$("#alert3").html("").slideUp(300);
@@ -64,10 +50,10 @@ document.getElementById('file').onchange=function(e){
     let reader=new FileReader();
     reader.readAsDataURL(e.target.files[0]);
     reader.onload=function(){
-        let preview=document.getElementById('preview');
+		let preview=document.getElementById('preview');
             image=document.createElement('img');
             image.src=reader.result;
-            image.style.width="250px";
+            image.style.width="200px";
             preview.innerHTML='';
             preview.append(image);
     }

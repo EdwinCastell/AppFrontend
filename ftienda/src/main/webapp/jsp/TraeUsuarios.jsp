@@ -7,6 +7,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="jsp/css/tables.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -28,20 +30,19 @@
 					ArrayList<Usuarios> lista = TestJSON.getJSON();
 					request.setAttribute("lista", lista);
 
-				for (Usuarios usuario : lista) {
+					for (Usuarios usuario : lista) {
 				%>
 				<tr>
 					<td><%=usuario.getCedula_usuario()%></td>
 					<td><%=usuario.getNombre_usuario()%></td>
 					<td><%=usuario.getEmail_usuario()%></td>
 					<td><%=usuario.getPassword()%></td>
-					<td><%=usuario.getUsuario()%></td>					
-
+					<td><%=usuario.getUsuario()%></td>
 				</tr>
 				<%
 				}
 				} catch (Exception e) {
-					e.printStackTrace();
+				e.printStackTrace();
 				}
 				%>
 			</tbody>
