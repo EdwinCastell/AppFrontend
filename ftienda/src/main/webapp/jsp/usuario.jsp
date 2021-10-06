@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@page import="co.edu.unbosque.backtienda.Usuarios"%>
+<%@page import="co.edu.unbosque.backtienda.TestJSON"%>
+<%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +21,8 @@
 
 <script src="js/main.js"></script>
 <script src="jsp/js/main.js"></script>
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="jsp/css/tables.css">
 <title>Tienda Genérica</title>
 </head>
 <body>
@@ -107,25 +112,36 @@
 							<!--<button class="submit" name="accion">
 								<i class="fas fa-search"></i> Consultar
 							</button>-->
-							<!-- <button class="submit" name="accion" value="actualizar">
+							<button class="submit" name="accion" value="actualizar">
 								<i class="far fa-edit"></i> Actualizar
-							</button>-->
+							</button>
 						</div>
 						<div class="grupo_boton">
 
-							<!-- <button class="submit" name="accion" value="eliminar">
+							<button class="submit" name="accion" value="eliminar">
 								<i class="fas fa-user-times"></i> Eliminar
-							</button>-->
+							</button>
 						</div>
 						<div id="alert" class="alert"></div>
 						<div id="alertpass" class="alert alertpass"></div>
-					</form>
+						<% if (request.getAttribute("cond") == "0") { %>
+							<script type="text/javascript">
+							alert("Usuario existente");
+							</script>
+						<%}%>
 				</div>
-				<iframe id="tableUsuario" class="bdtable" src="jsp/TraeUsuarios.jsp">
+				<iframe id="tableUsuario" class="bdtable" src="jsp/TraeUsuarios.jsp"> 
 				</iframe>
+				
+					</form>
 			</article>
 		</div>
 	</section>
+
+
+
+
+
 
 	<!-- Pagina clientes -->
 	<div class="secciones">

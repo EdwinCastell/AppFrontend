@@ -23,28 +23,37 @@
 						<th scope="col">Email</th>
 						<th scope="col">Usuario</th>
 						<th scope="col">Password</th>
-						<th scope="col">Actualizar</th>
-						<th scope="col">Eliminar</th>
+						<!-- <th scope="col">Actualizar</th> -->
+						<!-- <th scope="col">Eliminar</th> -->
 					</tr>
 				</thead>
 				<tbody>
+					
 					<%
+
 					try {
 						ArrayList<Usuarios> lista = TestJSON.getJSON();
 						request.setAttribute("lista", lista);
-
+						String cedula = request.getParameter("cedula");
 						for (Usuarios usuario : lista) {
+
 					%>
+
+						
 					<tr>
 						<td><%=usuario.getCedula_usuario()%></td>
 						<td><%=usuario.getNombre_usuario()%></td>
 						<td><%=usuario.getEmail_usuario()%></td>
-						<td><%=usuario.getPassword()%></td>
 						<td><%=usuario.getUsuario()%></td>
-						<td><button class="submit actualizar" name="accion"
-								value="actualizar">Actualizar</button></td>
-						<td><button class="submit eliminar" name="accion"
-								value="eliminar">Eliminar</button></td>
+						<td><%=usuario.getPassword()%></td>
+						<!--<td><button class="submit actualizar" name="accion"
+								value="actualizar">Actualizar</button></td>-->
+						<!-- <td><button class="submit" name="accion" value="eliminar">
+								<i class="fas fa-user-times"></i> Eliminar
+							</button> -->
+						
+						<!-- <button class="submit eliminar" name="accion"
+								value="eliminar">Eliminar</button>--></td>
 					</tr>
 					<%
 					}
