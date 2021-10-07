@@ -2,6 +2,8 @@
 	pageEncoding="ISO-8859-1"%>
 <%@page import="co.edu.unbosque.backtienda.Usuarios"%>
 <%@page import="co.edu.unbosque.backtienda.TestJSON"%>
+<%@page import="co.edu.unbosque.backtienda.Clientes"%>
+<%@page import="co.edu.unbosque.backtienda.TestJSON_clientes"%>
 <%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
@@ -129,11 +131,11 @@
 							alert("Usuario existente");
 							</script>
 						<%}%>
+					</form>
 				</div>
 				<iframe id="tableUsuario" class="bdtable" src="jsp/TraeUsuarios.jsp"> 
 				</iframe>
 				
-					</form>
 			</article>
 		</div>
 	</section>
@@ -144,71 +146,85 @@
 
 
 	<!-- Pagina clientes -->
+	<section>
+	
+	
 	<div class="secciones">
 		<article id="tab2">
 			<div class="box">
-				<form method="get" action="./DemoServlet" class="form">
+				<form method="get" action="./Controlador_clientes" class="form">
 					<div class="grupo_input">
 						<div class="inputBox">
-							<input type="number" name="cedula" id="cedulaCliente" required>
+						<input type="hidden" name="menu" value="Clientes">
+							<input type="number" name="cedula1" id="cedulaCliente" required>
 							<label><i class="far fa-address-card"></i> Cédula*</label>
 						</div>
 					</div>
 					<div class="grupo_input">
 						<div class="inputBox">
-							<input type="number" name="telefono" id="telefonoCliente"
-								required> <label><i class="fas fa-phone"></i>
+							<input type="number" name="telefono1" id="telefonoCliente">
+							<label><i class="fas fa-phone"></i>
 								Teléfono*</label>
 						</div>
 					</div>
 					<div class="grupo_input">
 						<div class="inputBox">
-							<input type="text" name="nombre" id="nombreCliente" required>
+							<input type="text" name="nombre1" id="nombreCliente" >
 							<label><i class="fas fa-file-signature"></i> Nombre
 								completo*</label>
 						</div>
 					</div>
 					<div class="grupo_input">
 						<div class="inputBox">
-							<input type="email" name="emailP" id="emailCliente"
-								onblur="javascript:validarCliente();" required> <label><i
+							<input type="email" name="emailP1" id="emailCliente"
+								onblur="javascript:validarCliente();"> <label><i
 								class="far fa-envelope"></i> Correo Electrónico*</label>
 						</div>
 					</div>
 					<div class="grupo_input">
 						<div class="inputBox">
-							<input type="text" name="direccion" id="direccionCliente"
-								required> <label><i class="fas fa-map-marked"></i>
+							<input type="text" name="direccion1" id="direccionCliente">
+							<label><i class="fas fa-map-marked"></i>
 								Dirección*</label>
 						</div>
 					</div>
 					<br>
 
 					<div class="grupo_boton">
-						<button class="submit">
+						<button class="submit" name = "accion1" value = "agregar1">
 							<i class="fas fa-user-plus"></i> Crear
 						</button>
-						<button class="submit">
+						<button class="submit" name = "accion1" value = "actualizar1">
 							<i class="far fa-edit"></i> Actualizar
 						</button>
 					</div>
 
 					<div class="grupo_boton">
-						<button class="submit">
+						<!-- <button class="submit" name = "accion" value = "consultar">
 							<i class="fas fa-search"></i> Consultar
-						</button>
-						<button class="submit">
+						</button>-->
+						<button class="submit" name="accion1" value = "eliminar1">
 							<i class="fas fa-user-times"></i> Eliminar
 						</button>
 					</div>
 
 					<div id="alert2" class="alert"></div>
+					
+					<% if (request.getAttribute("cond1") == "0") { %>
+						<script type="text/javascript">
+						alert("Usuario existente");
+						</script>
+					<%}%>
 				</form>
 			</div>
-			<iframe id="tableUsuario" class="bdtable" src="jsp/TraeClientes.jsp">
+			<iframe id="tableUsuario" class="bdtable" src="jsp/TraeUsuariosClientes.jsp">
 			</iframe>
 		</article>
 	</div>
+	
+	
+	</section>
+	
 
 	<!-- Pagina proveedores -->
 	<div class="secciones">
