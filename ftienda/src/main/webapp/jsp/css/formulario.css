@@ -1,66 +1,80 @@
 @charset "ISO-8859-1";
 
-@charset "ISO-8859-1";
-
-
-header{
+header {
 	background: url("../imagen/lossolfamitas.png") no-repeat;
 	margin-left: 30%;
 	padding: 20px 0 0 10px;
 	max-width: 100%;
-	max-height: 100%;	
-
+	max-height: 100%;
 }
-header h1{
+
+header h1 {
 	color: #ffffff;
 	padding: 40px;
 	text-align: center;
 	font-size: 200%;
 }
-body{
+
+body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
 	background-size: cover;
 	background: #D4D4D4;
-	
 }
-.box{
+
+.box {
 	position: absolute;
 	top: 60%;
 	left: 50%;
-	transform: translate(-10%,-50%);
+	transform: translate(-10%, -50%);
 	width: 600px;
 	padding: 40px;
-	background: rgba(0,0,0,.8);
+	background: rgba(0, 0, 0, .8);
 	box-sizing: border-box;
-	box-shadow: 0 0 0 rgba(0,0,0,.5);
-	border-radius: 10px;	
+	box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+	border-radius: 10px;
 }
 
-.box_file{
+
+.box_reportes {
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	padding: 20px;
+
+}
+
+.container .boton_flex {
+	display: flex;
+	justify-content: center;
+}
+
+.box_file {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-10%,-50%);
+	transform: translate(-10%, -50%);
 	width: 500px;
 	padding: 40px;
-	background: rgba(0,0,0,.8);
+	background: rgba(0, 0, 0, .8);
 	box-sizing: border-box;
-	box-shadow: 0 0 0 rgba(0,0,0,.5);
-	border-radius: 30px;	
+	box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+	border-radius: 30px;
 }
 
-.box h2{
+.box h2 {
 	margin: 0 0 30px;
 	padding: 0;
 	color: #fff;
 	text-align: center;
 }
-.box .inputBox{
+
+.box .inputBox {
 	position: relative;
 }
-.box .inputBox input{
+
+.box .inputBox input {
 	width: 80%;
 	padding: 10px 0;
 	font-size: 16px;
@@ -72,22 +86,18 @@ body{
 	border-color: #CD43EC;
 	outline: none;
 	background: transparent;
-	
-	
 }
 
-
-.pwdtxt,
-.icon{
-	color:#fff;
+/*mensaje mostrar contraseña*/
+.pwdtxt, .icon {
+	color: #fff;
 }
 
-.pwdtxt:hover,
-.icon:hover{
-	color:#ff00ff;
+.pwdtxt:hover, .icon:hover {
+	color: #ff00ff;
 }
-
-.box .inputBox label{
+/*fin de estilo mostrar contraseña*/
+.box .inputBox label {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -97,23 +107,17 @@ body{
 	color: #fff;
 	pointer-events: none;
 	transition: .5s;
-	
 }
 
-
-.box .inputBox input:focus ~ label,
-.box .inputBox input:valid ~ label
-{	
+.box .inputBox input:focus ~ label, .box .inputBox input:valid ~ label {
 	top: -18px;
 	left: 0;
 	color: #ffffff;
 	font-size: 11px;
-	
 }
 
-.box .grupo_boton .submit
-{
-	position: relative;	
+.box .grupo_boton .submit {
+	position: relative;
 	background: transparent;
 	border: none;
 	outline: none;
@@ -124,25 +128,32 @@ body{
 	border-radius: 5px;
 	margin: 5px;
 	width: 120px;
-  	height: 40px;
+	height: 40px;
+}
+
+.box .grupo_boton .submit_boton {
+	padding: 10px 10px;
+	margin: 5px;
+	width: 550px;
+	height: 60px;
 }
 
 .box .grupo_boton .submit:hover {
 	background: #FF00BF;
 }
-.box input[type="number"]::-webkit-inner-spin-button,
-.box input[type="number"]::-webkit-outer-spin-button 
-{
+
+.box input[type="number"]::-webkit-inner-spin-button, .box input[type="number"]::-webkit-outer-spin-button
+	{
 	-webkit-appearance: none;
 	margin: 0;
 }
 
-.box input[type="number"] 
-{ 
-	-moz-appearance:textfield; 
+.box input[type="number"] {
+	-moz-appearance: textfield;
 }
-.add_texto{
-	position:absolute;
+
+.add_texto {
+	position: absolute;
 	top: -5px;
 	left: 0px;
 	right: 0px;
@@ -152,14 +163,14 @@ body{
 	text-align: center;
 	color: #fff;
 	font-size: 12px;
-	
 }
-.grupo_file{
+
+.grupo_file {
 	position: relative;
 	padding: 10px 10px;
 	width: 50%;
 	background-color: #CD43EC;
-	border-radius:5px;
+	border-radius: 5px;
 	outline: none;
 	box-shadow: 0px 3px 0px #CD43EC;
 	height: 10%;
@@ -182,33 +193,29 @@ body{
 	opacity: 0;
 }
 
-.wrap{
+.wrap {
 	width: 800px;
 	max-width: 100%;
 	margin: 20px auto;
 }
 
-ul.tabs{
+ul.tabs {
 	width: 100%;
 	background: #363636;
 	list-style: none;
 	display: flex;
 	border-radius: 15px;
-	
-	
 }
-ul.tabs li:hover{	
+
+ul.tabs li:hover {
 	background: #ff00ff;
-
-	
 }
 
-ul.tabs li{
+ul.tabs li {
 	width: 16%;
-	
 }
 
-ul.tabs li a{
+ul.tabs li a {
 	color: #fff;
 	text-decoration: none;
 	font-size: 10px;
@@ -217,128 +224,125 @@ ul.tabs li a{
 	padding: 15px 0px;
 }
 
-.active{
+.active {
 	background: #CD43EC;
-	
 }
 
-ul.tabs li a .tab-text{
+ul.tabs li a .tab-text {
 	margin-left: 15px;
 }
 
-@media screen and (max-width: 700px){
-	ul.tabs li{
+@media screen and (max-width: 700px) {
+	ul.tabs li {
 		width: none;
 		flex-basis: 0;
 		flex-grow: 1;
 	}
-	.box {		
-		position:absolute;
+	.box {
+		position: absolute;
 		top: 90%;
 		left: 50%;
 		max-width: 100%;
 		padding: 50px;
-		background: rgba(0,0,0,.8);
+		background: rgba(0, 0, 0, .8);
 		box-sizing: border-box;
-		box-shadow: 0 0 0 rgba(0,0,0,.7);
+		box-shadow: 0 0 0 rgba(0, 0, 0, .7);
 		border-radius: 10px;
-	
 	}
-	.box .form{
+	.box .form {
 		display: grid;
 		grid-template-columns: 1fr;
 		font-size: 12px;
 	}
-	.form .grupo_boton{
+	.form .grupo_boton {
 		display: grid;
 		grid-template-columns: 1fr;
 	}
-	.box .inputBox input{
+	.box .inputBox input {
 		width: 100%;
-	
 	}
-	
-	.icon{
+	.icon {
 		position: absolute;
 		right: 90%;
 		top: 140px;
 		font-size: 15px;
-		
 	}
-	.pwdtxt{
+	.pwdtxt {
 		font-size: 12px;
 		position: absolute;
-		left: 150%;	
+		left: 150%;
 	}
-	
 }
 
-@media screen and (max-width: 550px){
-	ul.tabs li a{
+@media screen and (max-width: 550px) {
+	ul.tabs li a {
 		padding: 15px 0px;
 	}
-
-	ul.tabs li a .tab-text{
+	ul.tabs li a .tab-text {
 		display: none;
 	}
-	.box {		
-		
+	.box {
 		top: 80%;
 		left: 50%;
-		transform: translate(30%,-50%);
+		transform: translate(30%, -50%);
 		max-width: 100%;
 		padding: 50px;
-		background: rgba(0,0,0,.8);
+		background: rgba(0, 0, 0, .8);
 		box-sizing: border-box;
-		box-shadow: 0 0 0 rgba(0,0,0,.7);
+		box-shadow: 0 0 0 rgba(0, 0, 0, .7);
 		border-radius: 10px;
-	
 	}
-	.box .form{
+	.box .form {
 		display: grid;
 		grid-template-columns: 1fr;
 		font-size: 12px;
 	}
-	.form .grupo_boton{
+	.form .grupo_boton {
 		display: grid;
 		grid-template-columns: 1fr;
 	}
-	.box .inputBox input{
-	width: 100%;
-	
+	.box .inputBox input {
+		width: 100%;
 	}
-	
 }
-.form{
+/*formulario*/
+.form {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
 
-.form .grupo_boton{
+.form .grupo_boton {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	margin-top: 10%;
-	
 }
 
-.alert{
+.alert {
 	width: 250px;
 	padding: 5px;
 	margin-top: 10px;
 	color: #CD43EC;
-	display: none;	
+	display: none;
 }
 
+/*iframe para la tabla*/
 .bdtable {
-    border: 1px solid #CD43EC;
-    width: 600px;
-    height: 400px;
-    transform: translate(10%,15%);
-    border-radius: 5%;
-
+	border: 1px solid #CD43EC;
+	width: 600px;
+	height: 400px;
+	transform: translate(10%, 15%);
+	border-radius: 5%;
 }
 
 .output {
-    background: #eee;
+	background: #eee;
 }
-
+/*iframe para pagina ventas*/
+.ventas {
+	margin: 0;
+	padding: 0;
+	height: 1000px;
+	width: 100%;
+	display: block;
+	border: none;
+}
