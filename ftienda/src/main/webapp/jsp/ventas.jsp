@@ -22,107 +22,26 @@
 <body>
 	<div class="box">
 		<div class="container">
-			<form method="get" action="./Controlador" class="form">
-				<div class="grupo_input grupo_boton">
-					<input type="hidden" name="menu" value="Usuarios">
-					<!-- primer grupo -->
-					<div class="inputBox flex">
-						
-						<!-- cedula -->
-						<input type="number" name="cedula" id="cedulaVentas"
-							placeholder=" Cédula">
-
-						<!-- Boton consultar -->
-						<button class="submit fas fa-search" name="accion"
-							value="consultar">Consultar</button>
-
-						<!-- clientes -->
-						<input type="text" name="clientes" id="clientes_ventas"
-							placeholder=" Cliente">
-						<!-- consecutivo -->
-						<input type="text" name="consecutivo" id="consecutivo"
-							placeholder=" Consecutivo">
-					</div><br>
-					<!-- Fin del primer grupo-->
-					
-					<!-- Inicio div medio -->
-
-					<!-- segundo grupo -->
-					<div class="inputBox flex">
-						<!-- cod. producto -->
-						<input type="number" name="cod_producto" id="cod_producto"
-							placeholder=" Cod. Producto">
-
-						<!-- Boton consultar -->
-						<button class="submit fas fa-search" name="accion"
-							value="consultar">Consultar</button>
-
-						<!-- producto -->
-						<input type="text" name="producto" id="producto"
-							placeholder=" Nombre Producto">
-						<!-- cantidad -->
-						<input type="number" name="cantidad" id="cantidad"
-							placeholder=" Cantidad">
-						<!-- Valor total -->
-						<input type="number" name="valor_total" id="valor_total"
-							placeholder=" Valor Total">
-					</div>
-					<!-- Fin del segundo grupo-->
-					<!-- Tercer grupo -->
-					<div class="inputBox flex">
-						<!-- cod. producto -->
-						<input type="number" name="cod_producto" id="cod_producto">
-
-						<!-- Boton consultar -->
-						<button class="submit fas fa-search" name="accion"
-							value="consultar">Consultar</button>
-
-						<!-- producto -->
-						<input type="text" name="producto" id="producto">
-						<!-- cantidad -->
-						<input type="number" name="cantidad" id="cantidad">
-						<!-- Valor total -->
-						<input type="number" name="valor_total" id="valor_total">
-					</div>
-					<!-- Fin del tercer grupo-->
-					<!-- Cuarto grupo -->
-					<div class="inputBox flex">
-
-						<!-- cod. producto -->
-						<input type="number" name="cod_producto" id="cod_producto">
-
-						<!-- Boton consultar -->
-						<button class="submit fas fa-search" name="accion"
-							value="consultar">Consultar</button>
-
-						<!-- producto -->
-						<input type="text" name="producto" id="producto">
-						<!-- cantidad -->
-						<input type="number" name="cantidad" id="cantidad">
-						<!-- Valor total -->
-						<input type="number" name="valor_total" id="valor_total">
-					</div>
-					<!-- Fin del cuarto grupo-->
-					<!-- Fin div medio -->
-					
-					<!-- Inicio div final -->
-					<div class="inputBox box_final flex_final">
-						<!-- total venta -->
-						<input type="number" name="total_venta" id="total_venta"
-							placeholder=" Total Venta">
-					</div>
-					<div class="inputBox box_final flex_final">
-						<!-- total iva -->
-						<input type="number" name="total_iva" id="total_iva"
-							placeholder=" Total IVA">
-					</div>
-					<div class="inputBox box_final flex_final">
-						<!-- Boton confirmar -->
-						<button class="submit fas fa-check-double" name="accion"
-							value="consultar">Confirmar</button>
-						<!-- total con iva -->
-						<input type="number" name="total_civa" id="total_civa"
-							placeholder=" Total con IVA">						
+			<form method="get" action="../DemoServlet" class="form">
+				<div class="card">
+					<div class="card-body">
+						<div class="form-group">
+							<label>Datos Cliente</label>
+						</div>
+						<input type="hidden" name="menu" value="Ventas"> 
+						<input type="hidden" name="UsuarioActivo" value="${usuarioSeleccionado.getCedula_usuario()}" >
+						<div class="form-group d-flex">
+							<div class="col-sm-6 d-flex">
+								<input type="number" name="cedulacliente" class="form-control"
+									placeholder="cedula cliente" value="${clienteSeleccionado.getCedula_cliente()}"> 
+								<input type="submit" name="accion" value="BuscarCliente"
+									class="btn btn-outline-info">
+							</div>
+							<div class="col-sm-6">
+								<input type="text" name="nombrecliente" class="form-control"
+									placeholder="Nombre Cliente" value="${clienteSeleccionado.getNombre_cliente()}">
+							</div>
+						</div>
 					</div>
 				</div>
 			</form>

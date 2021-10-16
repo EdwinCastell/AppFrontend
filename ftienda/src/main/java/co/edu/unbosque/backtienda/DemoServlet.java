@@ -1,3 +1,4 @@
+
 package co.edu.unbosque.backtienda;
 
 import java.io.IOException;
@@ -20,6 +21,9 @@ public class DemoServlet extends HttpServlet {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
 
 	public void validarUsuarios(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

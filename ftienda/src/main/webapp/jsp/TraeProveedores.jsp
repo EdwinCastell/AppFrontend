@@ -9,62 +9,47 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="css/tables.css">
 <link rel="stylesheet" href="jsp/css/tables.css">
-<title>Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+	crossorigin="anonymous">
+<title>Creacion Proveedores</title>
 </head>
 <body>
-
-	<div class="col-md-8">
-		<form method="get" action="./Controlador_proveedores" class="form">
-			<table class="table">
-				<thead class="thead-dark">
-					<tr>
-						<th scope="col">Nit</th>
-						<th scope="col">Ciudad</th>
-						<th scope="col">Direccion</th>
-						<th scope="col">Nombre</th>
-						<th scope="col">Telefono</th>
-						<!-- <th scope="col">Actualizar</th> -->
-						<!-- <th scope="col">Eliminar</th> -->
-					</tr>
-				</thead>
-				<tbody>
-					
-					<%
-
-					try {
-						ArrayList<Proveedores> lista = TestJSON_proveedores.getJSON();
-						request.setAttribute("lista", lista);
-						String cedula = request.getParameter("cedula");
-						for (Proveedores proveedor : lista) {
-
-					%>
-
+	<div class="row">
+		<div class="col-md-7 seccion2">
+			<form method ="get" action="./Controlador" class="form">
+			<div class="card">
+				<div class="card-header">
+					<!-- <div class="form-group row">-->
+						<label class="card-header">Numero de factura</label>
+						<div class="grupo_input">
+						<div class="inputBox">
+							<input type="text" name="cantidad" id="cantidad" value="${cantidadProducto}" >
+						</div>
+					</div>
 						
-					<tr>
-						<td><%=proveedor.getNit_proveedores()%></td>
-						<td><%=proveedor.getCiudad_proveedores()%></td>
-						<td><%=proveedor.getDireccion_proveedores()%></td>
-						<td><%=proveedor.getNombre_proveedores()%></td>
-						<td><%=proveedor.getTelefono_proveedores()%></td>
-						<!--<td><button class="submit actualizar" name="accion"
-								value="actualizar">Actualizar</button></td>-->
-						<!-- <td><button class="submit" name="accion" value="eliminar">
-								<i class="fas fa-user-times"></i> Eliminar
-							</button> -->
-						
-						<!-- <button class="submit eliminar" name="accion"
-								value="eliminar">Eliminar</button>--></td>
-					</tr>
-					<%
-					}
-					} catch (Exception e) {
-					e.printStackTrace();
-					}
-					%>
-				</tbody>
-			</table>
-		</form>
+					<!--  </div>-->			
+				</div>
+				<div class="card-body">
+					<table class="thead-dark">
+						<tr>
+							<th>#</th>
+							<th>codigo</th>
+							<th>producto</th>
+							<th>precio</th>
+							<th>cantidad</th>
+							<th>iva</th>
+							<th>total</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+			</form>
+		</div>
 	</div>
 
+	
 </body>
 </html>

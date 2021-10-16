@@ -300,6 +300,8 @@
 						<div id="alert3" class="alert"></div>
 					</form>
 				</div>
+				<iframe id="tableUsuario" class="bdtable"
+					src="jsp/TraeProveedores.jsp"> </iframe>
 			</article>
 		</div>
 	</section>
@@ -343,7 +345,157 @@
 	<section>
 		<div class="secciones">
 			<article id="tab5">
-				<iframe id="ventas" class="ventas" src="jsp/ventas.jsp"> </iframe>
+
+				<div class="box">
+					<form method="get" action="./ControladorVentas" class="form">
+						<div class="grupo_input">
+							<div class="inputBox">
+								<input type="number" name="cedulaCliente" id="nit" required>
+								<label><i class="far fa-building"></i> Cedula Cliente*</label>
+							</div>
+						</div>
+						<div class="grupo_input">
+							<div class="inputBox">
+								<input type="text" name="telefonoP" class="form-contro"
+									value="${clienteNombre}"> <label><i
+									class="fas fa-phone"></i> Cliente*</label>
+							</div>
+						</div>
+						<div class="grupo_boton">
+
+							<button class="submit" name="accion3" value="BuscarCliente">
+								<i class="fas fa-user-plus"></i> Consultar
+							</button>
+						</div>
+						<br> <br>
+						<div class="grupo_input">
+							<div class="inputBox">
+								<input type="text" name="codigoProducto" id="nombreProveedor"
+									required> <label><i
+									class="fas fa-file-signature"></i> Codigo Producto*</label>
+							</div>
+						</div>
+						<br>
+						<div class="grupo_boton">
+							<button class="submit" name="accion3" value="BuscarProducto">
+								<i class="fas fa-user-plus"></i> Consultar Producto
+							</button>
+						</div>
+						<br>
+						<div class="grupo_input">
+							<div class="inputBox">
+								<input type="text" name="nombreProducto" id="nombreProveedor"
+									value="${nombreProducto1}"> <label><i
+									class="fas fa-file-signature"></i> Codigo Producto*</label>
+							</div>
+						</div>
+						<div class="grupo_input">
+							<div class="inputBox">
+								<input type="text" name="precioProducto" id="nombreP"
+									value="${precio}"> <label><i
+									class="fas fa-file-signature"></i> Cuesta*</label>
+							</div>
+						</div>
+
+						<div class="grupo_input">
+							<div class="inputBox">
+								<input type="text" name="ivaProducto" id="direccionProveedor"
+									value="${ivaProducto}"> <label><i
+									class="fas fa-map-marked"></i> Dirección*</label>
+							</div>
+						</div>
+						<div class="grupo_input">
+							<div class="inputBox">
+								<input type="text" name="cantidad" id="cantidad"
+									value="${cantidadProducto}" required> <label><i
+									class="fas fa-map-marked"></i> Cantidad*</label>
+							</div>
+						</div>
+
+
+						<div class="grupo_boton">
+							<button class="submit" name="accion3" value="agregarProducto">
+								<i class="fas fa-user-plus"></i> Agregar Producto
+							</button>
+						</div>
+						<!-- 
+						<div class="grupo_boton">
+							<button class="submit">
+								<i class="fas fa-search"></i> Consultar
+							</button>
+							<button class="submit">
+								<i class="fas fa-user-times"></i> Eliminar
+							</button>
+						</div>
+						-->
+
+						<div id="alert3" class="alert"></div>
+						<div></div>
+					</form>
+				</div>
+
+				<div id="tableUsuario" class="bdtable">
+					<!--  </div>-->
+					<div class="row">
+						<div class="col-md-7 seccion2">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-header">
+										<label class="col-sm-3 col-form-label">Numero Factura</label>
+										<input class="form-control col-md-4" type="text"
+											name="numerofactura" value="${cantidad1}">
+									</div>
+								</div>
+								<div class="card-body">
+									<table class="table">
+										<thead class="thead-dark">
+											<tr>
+												<th>#</th>
+												<th>codigo</th>
+												<th>producto</th>
+												<th>precio</th>
+												<th>cantidad</th>
+												<th>iva</th>
+												<th>total</th>
+											</tr>
+										</thead>
+										<tbody>
+											<c:forEach var="lista" items="${listaventas}">
+												<tr>
+													<th>${lista.getCodigo_detalle_venta()}</th>
+													<th>${lista.getCodigo_producto()}</th>
+													<th>${lista.getDescripcion_producto()}</th>
+													<th>${lista.getPrecio_producto()}</th>
+													<th>${lista.getCantidad_producto()}</th>
+													<th>${lista.getValor_iva()}</th>
+													<th>${lista.getValor_venta()}</th>
+												</tr>
+											</c:forEach>
+										</tbody>
+									</table>
+								</div>
+								<div class="card-footer d-flex">
+									<div class="col-md-4">
+										<label>Subtotal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										</label> <label>iva&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										</label><label>total a pagar</label>
+									</div>
+									<div class="col-md-4">
+										<input type="text" name="txtsubtotal" class="form-control"
+											placeholder="$ 00.000.00" disabled="disabled"
+											value="${totalventas}"> <input type="text"
+											name="txttotaliva" class="form-control"
+											placeholder="$ 00.000.00" disabled="disabled"
+											value="${totaliva}"> <input type="text"
+											name="txttotalapagar" class="form-control"
+											placeholder="$ 00.000.00" disabled="disabled"
+											value="${totalapagar}">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</article>
 		</div>
 	</section>
@@ -367,7 +519,7 @@
 
 								<!-- Boton consultar -->
 								<button class="submit submit_boton fas fa-search" name="accion"
-									value="consultar">Consultar</button>
+									value="consultarCliente">Consultar</button>
 								<br>
 
 								<!-- Boton consultar -->

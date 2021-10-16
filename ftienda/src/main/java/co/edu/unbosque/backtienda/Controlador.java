@@ -24,6 +24,10 @@ public class Controlador extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
     
+ 
+    
+
+    
     public int user(Long cedula) throws IOException, ParseException {
     	
 		ArrayList<Usuarios> lista = TestJSON.getJSON();
@@ -154,6 +158,20 @@ public class Controlador extends HttpServlet {
 				// TODO: handle exception
 			}
 			
+		}else if(accion.equals("consultarCliente")){
+			try {
+				PrintWriter write = response.getWriter();
+				respuesta = 200;
+				if (respuesta == 200) {
+					request.getRequestDispatcher("./usuario.jsp").forward(request,
+							response);
+				} else {
+					
+					write.println("Error: " + respuesta);
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
 		}
 		
 		
