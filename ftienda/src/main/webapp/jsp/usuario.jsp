@@ -242,37 +242,37 @@
 		<div class="secciones">
 			<article id="tab3">
 				<div class="box">
-					<form method="get" action="./DemoServlet" class="form">
+					<form method="get" action="./Controlador_proveedores" class="form">
 						<div class="grupo_input">
 							<div class="inputBox">
-								<input type="number" name="nit" id="nit" required> <label><i
+								<input type="number" name="nit" id="nitProveedor" required> <label><i
 									class="far fa-building"></i> NIT*</label>
 							</div>
 						</div>
 						<div class="grupo_input">
 							<div class="inputBox">
-								<input type="number" name="telefonoP" id="telefonoProveedor"
+								<input type="number" name="ciudadP" id="ciudadProveedor"
 									required> <label><i class="fas fa-phone"></i>
 									Teléfono*</label>
 							</div>
 						</div>
 						<div class="grupo_input">
 							<div class="inputBox">
-								<input type="text" name="nombreP" id="nombreProveedor" required>
+								<input type="text" name="direccionP" id="direccionProveedor" required>
 								<label><i class="fas fa-file-signature"></i> Nombre
 									completo*</label>
 							</div>
 						</div>
 						<div class="grupo_input">
 							<div class="inputBox">
-								<input type="email" name="emailP" id="emailProveedor"
+								<input type="email" name="nombreP" id="nombreProveedor"
 									onblur="javascript:validarProveedor();" required> <label><i
 									class="far fa-envelope"></i> Correo Electrónico*</label>
 							</div>
 						</div>
 						<div class="grupo_input">
 							<div class="inputBox">
-								<input type="text" name="direccion" id="direccionProveedor"
+								<input type="text" name="telefonoP" id="telefonoProveedor"
 									required> <label><i class="fas fa-map-marked"></i>
 									Dirección*</label>
 							</div>
@@ -280,24 +280,25 @@
 						<br>
 
 						<div class="grupo_boton">
-							<button class="submit">
-								<i class="fas fa-user-plus"></i> Crear
-							</button>
-							<button class="submit">
-								<i class="far fa-edit"></i> Actualizar
-							</button>
-						</div>
-
-						<div class="grupo_boton">
-							<button class="submit">
-								<i class="fas fa-search"></i> Consultar
-							</button>
-							<button class="submit">
+							<!-- <button class="submit" name = "accion" value = "consultar">
+							<i class="fas fa-search"></i> Consultar
+						</button>-->
+							<button class="submit" name="accion2" value="eliminar1">
 								<i class="fas fa-user-times"></i> Eliminar
 							</button>
 						</div>
 
-						<div id="alert3" class="alert"></div>
+						<div id="alert2" class="alert"></div>
+
+						<%
+						if (request.getAttribute("cond2") == "0") {
+						%>
+						<script type="text/javascript">
+							alert("Usuario existente");
+						</script>
+						<%
+						}
+						%>
 					</form>
 				</div>
 				<iframe id="tableUsuario" class="bdtable"
