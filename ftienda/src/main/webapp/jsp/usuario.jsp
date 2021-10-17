@@ -280,10 +280,19 @@
 						<br>
 
 						<div class="grupo_boton">
+							<button class="submit" name="accion2" value="agregar2">
+								<i class="fas fa-user-plus"></i> Crear
+							</button>
+							<button class="submit" name="accion2" value="actualizar2">
+								<i class="far fa-edit"></i> Actualizar
+							</button>
+						</div>
+
+						<div class="grupo_boton">
 							<!-- <button class="submit" name = "accion" value = "consultar">
 							<i class="fas fa-search"></i> Consultar
 						</button>-->
-							<button class="submit" name="accion2" value="eliminar1">
+							<button class="submit" name="accion2" value="eliminar2">
 								<i class="fas fa-user-times"></i> Eliminar
 							</button>
 						</div>
