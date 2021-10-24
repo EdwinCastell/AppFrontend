@@ -235,9 +235,8 @@
 			</article>
 		</div>
 	</section>
-
-
-	<!-- Pagina proveedores -->
+	
+	<!-- Pagina Proveedores -->
 	<section>
 		<div class="secciones">
 			<article id="tab3">
@@ -245,65 +244,55 @@
 					<form method="get" action="./Controlador_proveedores" class="form">
 						<div class="grupo_input">
 							<div class="inputBox">
-								<input type="number" name="nit" id="nitProveedor" required> <label><i
-									class="far fa-building"></i> NIT*</label>
+								<input type="number" name="nitP" id="nitP" required>
+								<label><i class="far fa-building"></i> NIT*</label>
 							</div>
 						</div>
 						<div class="grupo_input">
 							<div class="inputBox">
-								<input type="number" name="ciudadP" id="ciudadProveedor"
-									required> <label><i class="fas fa-phone"></i>
-									Teléfono*</label>
+								<input type="number" name="ciudadP" id="ciudadProveedor" >
+								<label><i class="fas fa-phone"></i>Telefono*</label>
 							</div>
 						</div>
 						<div class="grupo_input">
 							<div class="inputBox">
-								<input type="text" name="direccionP" id="direccionProveedor" required>
-								<label><i class="fas fa-file-signature"></i> Nombre
-									completo*</label>
+								<input type="text" name="direccionP" id="direccionProveedpr" >
+								<label><i class="fas fa-file-signature"></i>Nombre completo*</label>
 							</div>
 						</div>
 						<div class="grupo_input">
 							<div class="inputBox">
-								<input type="email" name="nombreP" id="nombreProveedor"
-									onblur="javascript:validarProveedor();" required> <label><i
-									class="far fa-envelope"></i> Correo Electrónico*</label>
+								<input type="email" name="nombreP" id="nombreProveedor" 
+								onblur="javascript:validarProveedor();" >
+								<label><i class="fas fa-file-envelope"></i>Correo Electronico*</label>
 							</div>
 						</div>
 						<div class="grupo_input">
 							<div class="inputBox">
-								<input type="text" name="telefonoP" id="telefonoProveedor"
-									required> <label><i class="fas fa-map-marked"></i>
-									Dirección*</label>
+								<input type="text" name="telefonoP" id="telefonoProveedor" >
+								<label><i class="fas fa-map-marked"></i> Direccion*</label>
 							</div>
 						</div>
-						<br>
-
+						</br>
 						<div class="grupo_boton">
-							<button class="submit" name="accion2" value="agregar2">
-								<i class="fas fa-user-plus"></i> Crear
+							<button class="submit" name="accion3" value="agregar3">
+								<i class="fas fa-user-plus">Crear</i>
 							</button>
-							<button class="submit" name="accion2" value="actualizar2">
-								<i class="far fa-edit"></i> Actualizar
+							<button class="submit" name="accion3" value="actualizar3">
+								<i class="far fa-edit">Actualizar</i>
 							</button>
 						</div>
-
 						<div class="grupo_boton">
-							<!-- <button class="submit" name = "accion" value = "consultar">
-							<i class="fas fa-search"></i> Consultar
-						</button>-->
-							<button class="submit" name="accion2" value="eliminar2">
+							<button class="submit" name="accion3" value="eliminar3">
 								<i class="fas fa-user-times"></i> Eliminar
 							</button>
 						</div>
-
 						<div id="alert2" class="alert"></div>
-
-						<%
+												<%
 						if (request.getAttribute("cond2") == "0") {
 						%>
 						<script type="text/javascript">
-							alert("Usuario existente");
+							alert("Nit existente");
 						</script>
 						<%
 						}
@@ -311,11 +300,11 @@
 					</form>
 				</div>
 				<iframe id="tableUsuario" class="bdtable"
-					src="jsp/TraeProveedores.jsp"> </iframe>
+					src="jsp/TraeProveedores.jsp"></iframe>
 			</article>
 		</div>
 	</section>
-
+	
 	<!-- Pagina Productos -->
 	<section>
 		<div class="secciones">
@@ -350,15 +339,14 @@
 			</article>
 		</div>
 	</section>
-
-	<!-- Pagina ventas -->
+	
+	<!-- Pagina Ventas -->
 	<section>
 		<div class="secciones">
 			<article id="tab5">
-
 				<div class="box">
 					<form method="get" action="./ControladorVentas" class="form">
-						<div class="grupo_input">
+					<div class="grupo_input">
 							<div class="inputBox">
 								<input type="number" name="cedulaCliente" id="nit" required>
 								<label><i class="far fa-building"></i> Cedula Cliente*</label>
@@ -428,88 +416,18 @@
 								<i class="fas fa-user-plus"></i> Agregar Producto
 							</button>
 						</div>
-						<!-- 
-						<div class="grupo_boton">
-							<button class="submit">
-								<i class="fas fa-search"></i> Consultar
-							</button>
-							<button class="submit">
-								<i class="fas fa-user-times"></i> Eliminar
-							</button>
-						</div>
-						-->
-
 						<div id="alert3" class="alert"></div>
 						<div></div>
 					</form>
 				</div>
-
-				<div id="tableUsuario" class="bdtable">
-					<!--  </div>-->
-					<div class="row">
-						<div class="col-md-7 seccion2">
-							<div class="card">
-								<div class="card-header">
-									<div class="card-header">
-										<label class="col-sm-3 col-form-label">Numero Factura</label>
-										<input class="form-control col-md-4" type="text"
-											name="numerofactura" value="${cantidad1}">
-									</div>
-								</div>
-								<div class="card-body">
-									<table class="table">
-										<thead class="thead-dark">
-											<tr>
-												<th>#</th>
-												<th>codigo</th>
-												<th>producto</th>
-												<th>precio</th>
-												<th>cantidad</th>
-												<th>iva</th>
-												<th>total</th>
-											</tr>
-										</thead>
-										<tbody>
-											<c:forEach var="lista" items="${listaventas}">
-												<tr>
-													<th>${lista.getCodigo_detalle_venta()}</th>
-													<th>${lista.getCodigo_producto()}</th>
-													<th>${lista.getDescripcion_producto()}</th>
-													<th>${lista.getPrecio_producto()}</th>
-													<th>${lista.getCantidad_producto()}</th>
-													<th>${lista.getValor_iva()}</th>
-													<th>${lista.getValor_venta()}</th>
-												</tr>
-											</c:forEach>
-										</tbody>
-									</table>
-								</div>
-								<div class="card-footer d-flex">
-									<div class="col-md-4">
-										<label>Subtotal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										</label> <label>iva&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										</label><label>total a pagar</label>
-									</div>
-									<div class="col-md-4">
-										<input type="text" name="txtsubtotal" class="form-control"
-											placeholder="$ 00.000.00" disabled="disabled"
-											value="${totalventas}"> <input type="text"
-											name="txttotaliva" class="form-control"
-											placeholder="$ 00.000.00" disabled="disabled"
-											value="${totaliva}"> <input type="text"
-											name="txttotalapagar" class="form-control"
-											placeholder="$ 00.000.00" disabled="disabled"
-											value="${totalapagar}">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+								
 			</article>
 		</div>
 	</section>
-
+	
+	
+	
+	
 	<!-- Pagina Reportes -->
 	<section>
 		<div class="secciones">
@@ -517,13 +435,10 @@
 				<div class="box box_reportes">
 					<div class="container">
 						<form method="get" action="./Controlador" class="form">
-							<input type="hidden" name="menu" value="Usuarios">
+							<input type="hidden" name="menu" value="Reportes">
 							<div class="grupo_boton boton_flex">
-
-								<!-- primer grupo -->
-								<!-- Boton consultar -->
-								<button class="submit submit_boton fas fa-search" name="accion"
-									value="consultar">Consultar</button>
+								<button class="submit submit_boton fas far-search"
+								   name="accion" value="consultar">Consultar</button>
 								<br>
 
 
@@ -535,9 +450,6 @@
 								<!-- Boton consultar -->
 								<button class="submit submit_boton fas fa-search" name="accion"
 									value="consultar">Consult</button>
-
-
-								<!-- Fin del primer grupo-->
 							</div>
 						</form>
 					</div>
@@ -545,6 +457,8 @@
 			</article>
 		</div>
 	</section>
+
+
 
 
 	<script src="js/formulario.js"></script>

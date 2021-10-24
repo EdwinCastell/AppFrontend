@@ -23,7 +23,7 @@ public class Controlador_proveedores extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	public int user(long nit) throws IOException, ParseException {
+	public int user(Long nit) throws IOException, ParseException {
 	    	
 			ArrayList<Proveedores> lista = TestJSON_proveedores.getJSON();
 	
@@ -38,7 +38,7 @@ public class Controlador_proveedores extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String accion = request.getParameter("accion2");
+		String accion = request.getParameter("accion3");
 		String nit = request.getParameter("nitP");
 		String ciudad = request.getParameter("ciudadP");
 		String direccion = request.getParameter("direccionP");
@@ -48,7 +48,7 @@ public class Controlador_proveedores extends HttpServlet {
 		
 		int respuesta = 0;
 		
-		if (accion.equals("agregar2")) {
+		if (accion.equals("agregar3")) {
 			int cond = 0;
 			try {
 				cond = user(Long.parseLong(nit));
@@ -107,7 +107,7 @@ public class Controlador_proveedores extends HttpServlet {
 				}
 			}
 				
-		}else if  (accion.equals("eliminar2")) {
+		}else if  (accion.equals("eliminar3")) {
 			try {
 				PrintWriter write = response.getWriter();
 				respuesta = TestJSON_proveedores.deleteJSON(Long.parseLong(nit));
@@ -122,7 +122,7 @@ public class Controlador_proveedores extends HttpServlet {
 				// TODO: handle exception
 			}
 			
-		} else if (accion.equals("actualizar2")) {
+		} else if (accion.equals("actualizar3")) {
 			
 			
 			Proveedores proveedor = new Proveedores();

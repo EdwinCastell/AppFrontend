@@ -32,11 +32,11 @@ public class TestJSON_proveedores {
 		while (i.hasNext()) {
 			JSONObject innerObj = (JSONObject) i.next();
 			Proveedores proveedor = new Proveedores();
-			proveedor.setNit_proveedores(Long.parseLong(innerObj.get("nit_proveedores").toString()));; //convertir de String a Long
-			proveedor.setCiudad_proveedores(innerObj.get("ciudad_proveedores").toString());;
-			proveedor.setDireccion_proveedores(innerObj.get("direccion_proveedores").toString());;
-			proveedor.setNombre_proveedores(innerObj.get("nombre_proveedores").toString());;
-			proveedor.setTelefono_proveedores(innerObj.get("telefono_proveedores").toString());;
+			proveedor.setNit_proveedores(Long.parseLong(innerObj.get("nit_proveedor").toString()));; //convertir de String a Long
+			proveedor.setCiudad_proveedores(innerObj.get("ciudad_proveedor").toString());;
+			proveedor.setDireccion_proveedores(innerObj.get("direccion_proveedor").toString());;
+			proveedor.setNombre_proveedores(innerObj.get("nombre_proveedor").toString());;
+			proveedor.setTelefono_proveedores(innerObj.get("telefono_proveedor").toString());;
 			lista.add(proveedor);
 		}
 		return lista;
@@ -82,9 +82,9 @@ public class TestJSON_proveedores {
 		http.setRequestProperty("Accept", "application/json");
 		http.setRequestProperty("Content-Type", "application/json");
 
-		String data = "{" + "\"nit_proveedores\":\"" + String.valueOf(proveedor.getNit_proveedores())
-			+ "\",\"ciudad_proveedores\": \"" + proveedor.getCiudad_proveedores() + "\",\"direccion_proveedores\": \""
-			+ proveedor.getDireccion_proveedores() + "\",\"nombre_proveedores\":\"" + proveedor.getNombre_proveedores() + "\",\"telefono_proveedores\":\""
+		String data = "{" + "\"nit_proveedor\":\"" + String.valueOf(proveedor.getNit_proveedores())
+			+ "\",\"ciudad_proveedor\": \"" + proveedor.getCiudad_proveedores() + "\",\"direccion_proveedor\": \""
+			+ proveedor.getDireccion_proveedores() + "\",\"nombre_proveedor\":\"" + proveedor.getNombre_proveedores() + "\",\"telefono_proveedor\":\""
 			+ proveedor.getTelefono_proveedores()+ "\"}";
 		byte[] out = data.getBytes(StandardCharsets.UTF_8);
 		OutputStream stream = http.getOutputStream();
@@ -138,11 +138,11 @@ public class TestJSON_proveedores {
 		http.setRequestProperty("Content-Type", "application/json");
 		
 		String data = "{"
-				+ "\"nit_proveedores\":\""+ id
-				+"\",\"ciudad_proveedores\": \""+ proveedores.getCiudad_proveedores()
-				+"\",\"direccion_proveedores\": \""+ proveedores.getDireccion_proveedores()
-				+"\",\"nombre_proveedores\":\""+ proveedores.getNombre_proveedores()
-				+"\",\"telefono_proveedores\":\""+ proveedores.getTelefono_proveedores()
+				+ "\"nit_proveedor\":\""+ id
+				+"\",\"ciudad_proveedor\": \""+ proveedores.getCiudad_proveedores()
+				+"\",\"direccion_proveedor\": \""+ proveedores.getDireccion_proveedores()
+				+"\",\"nombre_proveedor\":\""+ proveedores.getNombre_proveedores()
+				+"\",\"telefono_proveedor\":\""+ proveedores.getTelefono_proveedores()
 				+ "\"}";
 		byte[] out = data.getBytes(StandardCharsets.UTF_8);
 		OutputStream stream = http.getOutputStream();
